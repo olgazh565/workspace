@@ -28,16 +28,16 @@ const init = () => {
     controlFormFilter();
     resetForm(cityChoices);
   } catch (error) {
-    console.log('error: ', error);
-    console.warn('Мы не на странице index.html');
+    // console.log('error: ', error);
+    // console.warn('Мы не на странице index.html');
   }
   try {
     fileControl();
     formControl();
     controlNumberInputForFirefox();
   } catch (error) {
-    console.log('error: ', error);
-    console.warn('Мы не на странице employer.html');
+    // console.log('error: ', error);
+    // console.warn('Мы не на странице employer.html');
   }
 };
 

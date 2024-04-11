@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WorkSpace</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="manifest" href="img/site.webmanifest">
+  <link rel="stylesheet" href="index.css">
+
+  <script src="js/loader.js" type="module"></script>
+  <script src="js/choices.min.js" type="module"></script>
+  <script src="js/script.js" type="module"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <img class="header__logo" src="img/logo.svg" alt="Логитип WorkSpace">
+
+      <div class="header__links">
+        <a class="header__link" href="#vacancies">Посмотреть вакансии</a>
+        <a class="header__link header__link_o" href="employer.html">Добавить новую вакансию</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__container">
+        <h1 class="hero__title">Найди работу
+          <span class="blue-text">своей мечты</span>
+        </h1>
+      </div>
+    </section>
+
+    <section class="vacancies" id="vacancies">
+      <div class="container vacancies__container">
+        <button class="vacancies__filter-btn ">
+          <span>Фильтр</span>
+          <svg class="vacancies__filter-btn-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 15L14 9H6L10 15Z" fill="currentColor" />
+          </svg>
+        </button>
+
+        <section class="vacancies__filter filter">
+          <h2 class="filter__title">Фильтр</h2>
+
+          <form class="filter__form">
+            <fieldset class="filter__fieldset">
+              <legend class="filter__legend">Город</legend>
+
+              <select class="filter__select" name="city" id="city">
+                <option value="">Выбрать город</option>
+              </select>
+            </fieldset>
+
+            <fieldset class="filter__fieldset">
+              <legend class="filter__legend">Заработная плата</legend>
+
+              <div class="filter__range">
+                <input class="filter__input" type="number" name="pay-from" placeholder="от">
+
+                <input class="filter__input" type="number" name="pay-to" placeholder="до">
+              </div>
+            </fieldset>
+
+            <div class="filter__checkboxes">
+              <fieldset class="filter__fieldset">
+                <legend class="filter__legend">Формат</legend>
+
+                <label class="filter__label checkbox">
+                  <input class="checkbox__input" type="checkbox" name="format" value="Офис">Офис
+                </label>
+
+                <label class="filter__label checkbox">
+                  <input class="checkbox__input" type="checkbox" name="format" value="Удаленный">Удаленный
+                </label>
+
+                <label class="filter__label checkbox">
+                  <input class="checkbox__input" type="checkbox" name="format" value="Гибкий">Гибкий
+                </label>
+              </fieldset>
+
+              <fieldset class="filter__fieldset">
+                <legend class="filter__legend">Опыт работы</legend>
+
+                <label class="filter__label checkbox">
+                  <input class="checkbox__input" type="checkbox" name="experience" value="Опыт не важен">Опыт не важен
+                </label>
+
+                <label class="filter__label checkbox">
+                  <input class="checkbox__input" type="checkbox" name="experience" value="Без опыта">Без опыта
+                </label>
+
+                <label class="filter__label checkbox">
+                  <input class="checkbox__input" type="checkbox" name="experience" value="От 1 года до 3-х лет">От 1
+                  года до
+                  3-х лет
+                </label>
+
+                <label class="filter__label checkbox">
+                  <input class="checkbox__input" type="checkbox" name="experience" value="От 3-х лет">От 3 -х лет
+                </label>
+              </fieldset>
+
+              <fieldset class="filter__fieldset">
+                <legend class="filter__legend">Занятость</legend>
+
+                <label class="filter__label checkbox">
+                  <input class="checkbox__input" type="checkbox" name="type" value="Полная занятость">Полная занятось
+                </label>
+
+                <label class="filter__label checkbox">
+                  <input class="checkbox__input" type="checkbox" name="type" value="Частичная занятость">Частичная
+                  занятость
+                </label>
+
+                <label class="filter__label checkbox">
+                  <input class="checkbox__input" type="checkbox" name="type" value="Стажировка">Стажировка
+                </label>
+
+                <label class="filter__label checkbox">
+                  <input class="checkbox__input" type="checkbox" name="type" value="Проектная работа">Проектная работа
+                </label>
+              </fieldset>
+            </div>
+
+            <div class="filter__buttons">
+              <button class="filter__button" type="submit">Применить</button>
+
+              <button class="filter__reset" type="button">Очистить</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="vacancies__cards cards">
+          <h2 class="cards__title visually-hidden">Список вакансий</h2>
+
+          <ul class="cards__list"></ul>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <img class="footer__logo" src="img/logo-footer.svg" alt="Логотип WorkSpace">
+
+      <p class="footer__copyright">© Work Space, 2023</p>
+
+      <ul class="footer__contacts">
+        <li class="footer__contact">Designer:
+          <a class="footer__link" href="#">Anastasia Ilina</a>
+        </li>
+        <li class="footer__contact">Developer:
+          <a class="footer__link" href="#">Olga Zhebit</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
